@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "HTML",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Downloads",
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "xprotocol",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 33060,
+				"driver": "MySQL",
+				"name": "Aura International Christian School",
+				"database": "register_student",
+				"username": "Reelly",
+				"password": "HillCity.dev",
+				"connectionTimeout": 30
+			}
+		]
+	}
+}
