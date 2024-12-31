@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Events - International Christian School{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='event.css') }}">
+{% endblock %}
+{% block content %}
+    <!-- School term start and end dates + In-line semester events -->
+    <h1 class="section-title">School Calendar</h1>
+    <div>
+        <section id="dates" class="section>
+            <h2>A.I.C.S. Academic Year 2025</h2>
+            <div id="sem_dates">
+                <div>
+                    <header class="header">There are no upcoming events.</header>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="in-term_events">
+                <!-- Request for school calendar and programme-->
+            </div>
+        </section>
+    </div>
+    <main>
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h2>About AICS</h2>
+                    <p>
+                        AICS uses the Accelerated Christian Education(ACE)
+                        curriculum. At AICS, we provide a Christ-centered
+                        education using ACE which is an individualized, 
+                        self-paced, and bible-based programme.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <p id="email">Email: info@auraics.com</p>
+                    <p id="phone_number">Tel: +256-751-420-955</p>
+                    <p id="address">Najjera, Kira Town Council </p>
+                    <p id="box">P.O. Box: 176545</p>
+                </div>
+                <!-- Socials Section -->
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>                </div>
+                </div>
+            </div>
+            <div class="socket">
+                <span class="copyright">Copyright 2024 © Aura International Christian School</span>
+            </div>
+        </footer>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}

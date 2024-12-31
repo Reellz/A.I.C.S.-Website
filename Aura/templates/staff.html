@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Staff - Aura International Christian School{% endblock %}
+
+{% block css%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='staff.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>STAFF</h1>
+    <section class="section">
+        <div class="staff-container">
+            <div class="staff-text">
+                <img src="{{ url_for('static', filename='/images/Mrs._Samalie.jpg') }}" alt="admin" id="admin">
+                <h2 class="section-title">
+                    Mrs.Samalie Nkanyagi - Administrator
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="staff-container">
+            <div class="staff-text">
+                <img src="{{ url_for('static', filename='/images/Mrs.Pamella.jpg') }}" alt="school principle" id="head">
+                <h2 class="section-title">
+                    Mrs. Pamella Illara - School Principle
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="staff-container">
+            <div class="staff-text">
+                <img src="{{ url_for('static', filename='/images/Mrs. Sarah.jpg') }}" alt="managing director" id="manage">
+                <h2 class="section-title">
+                    Mrs.Sarah Bwambale - Managing Director
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="staff-container">
+            <div class="staff-text">
+                <img src="{{ url_for('static', filename='/images/Rev.Alex-Abraham2.jpg') }}" alt=" SI director" id="direcsp">
+                <h2 class="section-title">
+                    Rev.Alex Abraham - Spiritual and Innovations Director
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h2>About AICS</h2>
+                    <p>
+                        AICS uses the Accelerated Christian Education(ACE)
+                        curriculum. At AICS, we provide a Christ-centered
+                        education using ACE which is an individualized, 
+                        self-paced, and bible-based programme.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <p id="email">Email: info@auraics.com</p>
+                    <p id="phone_number">Tel: +256-751-420-955</p>
+                    <p id="address">Najjera, Kira Town Council </p>
+                    <p id="box">P.O. Box: 176545</p>
+                </div>
+                <!-- Socials Section -->
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>                </div>
+                </div>
+                <div class="socket">
+                    <span class="copyright">Copyright 2024 © Aura International Christian School</span>
+               </div>
+            </div>
+        </footer>
+    </main>
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}

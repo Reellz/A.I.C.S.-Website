@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Aura International Christian School - Growing to Glow{% endblock %}
+
+{% block css %}
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+{% block content %}
+    <!-- Content -->
+    <h1 id="welcome">Welcome to Aura International Christian School!</h1>
+    <h2 id="moto">Growing to glow</h2>
+    
+    <section class="section">
+        <div class="content">
+            <p id="overview">
+                Aura International Christian School is positioned to become a leading educational institution that 
+                blends innovative and academic excellence with Christian values. Located in a diverse and multicultural 
+                environment, the school aims to provide an exceptional learning experience for students of various backgrounds 
+                while nurturing their faith. With a commitment to holistic education, we strive to empower students to reach 
+                their full potential spiritually, academically, and socially.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div id="explore">
+            <h2 class="section-title">Explore A.I.C.S.</h2>
+            <p id="learn-more">
+                A.I.C.S is an institution that aims to prepare Godly leaders, Focused innovators, and Responsible members of society.
+                In a world that is advancing so quickly and is introducing people to its new set standards, some of which are having 
+                a negative impact in society and are derailing the society from the Lord and the purpose for which man was created.
+                We aim to achieve these goals through spiritual guidance of students, daily devotion, and discipleship using the ACE 
+                Curriculum. 
+            </p>
+            <button class="info learn-more"><a href="{{url_for ('about')}}">Learn more</a></button>
+        </div>
+    </section>
+    
+    <main>
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h2>About AICS</h2>
+                    <p>
+                        AICS uses the Accelerated Christian Education(ACE)
+                        curriculum. At AICS, we provide a Christ-centered
+                        education using ACE which is an individualized, 
+                        self-paced, and bible-based programme.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <p id="email">Email: info@auraics.com</p>
+                    <p id="phone_number">Tel: +256-751-420-955</p>
+                    <p id="address">Najjera, Kira Town Council </p>
+                    <p id="box">P.O. Box: 176545</p>
+                </div>
+                <!-- Socials Section -->
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+            <div class="socket">
+                <span class="copyright">Copyright 2024 © Aura International Christian School</span>
+            </div>
+        </footer>
+    </main>
+    <script src="{{ url_for('static', filename='animate.js')}}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+{% endblock %}

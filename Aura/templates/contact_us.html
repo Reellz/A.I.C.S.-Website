@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Aura International Christian School{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='contacts.css') }}">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’re here to help! Reach out using the information below or the form provided.</p>
+    </header>
+    <main>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Aura International Christian School</strong></p>
+            <p>Najjera, Kira Town Council</p>
+            <p>📞 <strong>Phone:</strong>+256-751-420-955</p>
+            <p>📧 <strong>Email:</strong> <a href="mailto:info@auraics.com">info@auraics.com</a></p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="/contact" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number (Optional):</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="admissions">Admissions</option>
+                    <option value="support">Support</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Message</button>
+            </form>
+        </section>
+
+        <section class="office-hours">
+            <h2>Office Hours</h2>
+            <p>📅 Monday – Friday: 8:00 AM – 4:00 PM</p>
+            <p>📅 Saturday and Sunday: Closed</p>
+        </section>
+
+        <section class="map">
+            <h2>Find Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.9052330233153!2d32.61953810891788!3d0.3879473996066208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db1005e6c46c5%3A0x9726f02f65d4e8b9!2sAura%20International%20C.S!5e1!3m2!1sen!2sug!4v1735238836951!5m2!1sen!2sug" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h2>About AICS</h2>
+                    <p>
+                        AICS uses the Accelerated Christian Education(ACE)
+                        curriculum. At AICS, we provide a Christ-centered
+                        education using ACE which is an individualized, 
+                        self-paced, and bible-based programme.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <p id="email">Email: info@auraics.com</p>
+                    <p id="phone_number">Tel: +256-751-420-955</p>
+                    <p id="address">Najjera, Kira Town Council </p>
+                    <p id="box">P.O. Box: 176545</p>
+                </div>
+                <!-- Socials Section -->
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>                </div>
+            </div>
+            <div class="socket">
+                <span class="copyright">Copyright 2024 © Aura International Christian School</span>
+            </div>
+        </footer>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}

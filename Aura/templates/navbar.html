@@ -1,0 +1,33 @@
+<nav class="navbar"> 
+    <div class="navbar__container">
+        <!-- Left Section: Logo and Title -->
+        <div class="navbar__left">
+            <img src="{{ url_for('static', filename='/images/logo.png') }}" alt="School Logo" class="navbar__logo">
+            <div class="navbar__title"><a href="{{ url_for('index') }}">Aura International Christian School</a></div>
+        </div>
+
+        <!-- Right Section: Navigation Links, Language Dropdown, Buttons, and Toggle -->
+        <div class="navbar__right">
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="{{ url_for('index') }}" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="{{ url_for('staff') }}" class="navbar__links">Staff</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="{{ url_for('events') }}" class="navbar__links">Events</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="{{ url_for('about') }}" class="navbar__links">About Us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="{{ url_for('contact') }}" class="navbar__links">Contact Us</a>
+                </li>
+            </ul>
+            <div class="navbar__buttons">
+                <a href="{{ url_for('register') }}" class="navbar__btn apply">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</nav>

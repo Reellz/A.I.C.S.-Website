@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - Aura International Christian School{% endblock %}
+
+{% block css %}
+    {% if omit_base_styles %}
+        <!-- Only include the form-specific CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/form.css') }}">
+    {% else %}
+        <!-- Include both base styles and form-specific CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/form.css') }}">
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h2>School Registration Form</h2>
+        <form action="/register" method="POST">
+            <!-- Student Information -->
+            <h3>Student Information</h3>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" pattern="[A-Za-z0-9]{1,10}" required>
+            
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" name="middle_name" pattern="[A-Za-z0-9]{1,10}" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" pattern="[A-Za-z0-9]{1,10}" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <div class="radio-group">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <label for="grade">Grade Applying For:</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <label for="start-date">Preferred Start Date:</label>
+            <input type="date" id="start-date" name="start_date" required>
+
+            <!-- Parent/Guardian Information -->
+            <h3>Parent/Guardian Information</h3>
+            <label for="parent-first-name">First Name:</label>
+            <input type="text" id="parent-first-name" name="parent_first_name" pattern="[A-Za-z0-9]{1,10}" required>
+
+            <label for="parent-last-name">Last Name:</label>
+            <input type="text" id="parent-last-name" name="parent_last_name" pattern="[A-Za-z0-9]{1,10}" required>
+
+            <label for="relationship">Relationship to Student:</label>
+            <input type="text" id="relationship" name="relationship" required>
+
+            <label for="contact-number">Primary Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact_number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Home Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Emergency Contact Information -->
+            <h3>Emergency Contact Information</h3>
+            <label for="emergency-contact-name">Emergency Contact Name:</label>
+            <input type="text" id="emergency-contact-name" name="emergency_contact_name" pattern="[A-Za-z0-9]{1,10}" required>
+
+            <label for="emergency-relationship">Relationship to Student:</label>
+            <input type="text" id="emergency-relationship" name="emergency_relationship" required>
+
+            <label for="emergency-contact-number">Contact Number:</label>
+            <input type="tel" id="emergency-contact-number" name="emergency_contact_number" required>
+
+            <label for="emergency-alternate-number">Alternate Contact Number:</label>
+            <input type="tel" id="emergency-alternate-number" name="emergency_alternate_number">
+
+            <!-- Medical Information -->
+            <h3>Medical Information</h3>
+            <div class="checkbox-group">
+                <label>Allergies or Medical Conditions:</label>
+                <label><input type="checkbox" name="medical_condition" value="none" checked> None</label>
+                <label><input type="checkbox" name="medical_condition" value="yes"> Yes (Please specify):</label>
+                <input type="text" name="medical_details">
+            </div>
+
+            <div class="checkbox-group">
+                <label>Medications Required:</label>
+                <label><input type="checkbox" name="medications" value="none" checked> None</label>
+                <label><input type="checkbox" name="medications" value="yes"> Yes (Please specify):</label>
+                <input type="text" name="medications_details">
+            </div>
+
+            <!-- Previous School Information -->
+            <h3>Previous School Information</h3>
+            <label for="previous-school-name">Previous School Name:</label>
+            <input type="text" id="previous-school-name" name="previous_school_name">
+
+            <label for="previous-school-address">Address:</label>
+            <input type="text" id="previous-school-address" name="previous_school_address">
+
+            <label for="previous-school-contact">Contact Number:</label>
+            <input type="tel" id="previous-school-contact" name="previous_school_contact">
+
+            <!-- Other Information -->
+            <h3>Other Information</h3>
+            <label>Does the student require transportation?</label>
+            <label><input type="radio" name="transportation" value="yes"> Yes</label>
+            <label><input type="radio" name="transportation" value="no"> No</label>
+
+            <label for="additional-info">Additional Information or Special Needs:</label>
+            <textarea id="additional-info" name="additional_info"></textarea>
+
+            <!-- Signature and Submit Button -->
+            <label for="signature">Parent/Guardian Signature:</label>
+            <input type="text" id="signature" name="signature" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+{% endblock %}

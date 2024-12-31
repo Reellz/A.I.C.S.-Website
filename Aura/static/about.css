@@ -1,0 +1,305 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgba(255, 166, 0, 0.171); /* Light orange background */
+    background-image: url('Hats.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    margin: 0;
+    padding: 60px;
+}
+
+h2{
+    color: #000000; /* Brand color for headings */
+    text-align: left; /* Align headings to the left */
+    margin: 0.5em 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    font-size: 0.9em;
+}
+
+main {
+    padding: 1em 2em;
+}
+
+p {
+    margin: 0.5em 0;
+    text-align: left;
+    padding-left: 0;
+}
+
+/* Section Styling */
+.section {
+    padding: 20px; /* Adjusted for fixed navbar */
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Light white background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-align: center; /* Align section titles to center */
+    text-decoration: underline; /* Underlined section titles */
+    font-size: 1.8em;
+    color: #b76d1a; /* Accent color for headings */
+    margin: 0.5em 0;
+}
+
+/* Styling for mission and vision */
+#head {
+    text-align: center;
+}
+
+/* Information section styling */
+#statement {
+    padding-top: 60px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Sticks the navbar to the top */
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: rgba(245, 245, 220, 0.9); /* Light beige background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for a modern look */
+}
+
+.navbar__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 245, 220, 0.696);
+}
+
+.navbar__left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo {
+    height: 100px; /* Adjust the logo size */
+    margin-right: 15px;
+}
+
+.navbar__title h1 {
+    color: #FFD700; /* Gold color for the title */
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar__title p {
+    color: black;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Navbar Links */
+.navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__item {
+    position: relative; /* For dropdown positioning */
+    margin: 0 10px;
+}
+
+.navbar__links {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Buttons */
+.navbar__buttons .navbar__btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+}
+
+.navbar__btn.apply {
+    background-color: #800000; /* Dark red */
+}
+
+
+/* Hamburger Menu (for Mobile View) */
+.navbar__toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+}
+
+.navbar__toggle .bar {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    .section {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .navbar__menu {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Below the navbar */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar__menu.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .navbar__toggle {
+        display: block; /* Show hamburger menu */
+    }
+}
+
+/* Footer Container */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #10480b82; /* Matching dark background */
+    color: white;
+}
+.footer h2 {
+    color: #000000;
+    text-decoration: underline;
+    border-bottom: none;
+    text-align: left;
+    margin: 2px;
+} 
+
+.footer p {
+    text-align: left;
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+/* About Section */
+.footer .about {
+    flex: 1;
+    display: flex; /* Added to align content */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.footer .about h2 {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer .about p {
+    font-size: medium;
+    margin: 0; /* Ensures proper alignment */
+    width: 90%;  /* Takes up only one-third of the footer width */
+}
+
+/* Contact Section */
+.footer .contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .contact h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.footer .contact p {
+    margin: 0;
+    font-size: medium;
+}
+
+/* Social Section */
+.footer .socials {
+    flex: 0.5;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 40px;
+    width: 33%;
+}
+
+.footer .socials h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.footer .socials a {
+    display: inline-block; /* Ensures the links align horizontally */
+    margin: 0 10px; /* Adds spacing between the icons */
+    font-size: 32px; /* Adjusts the size of the icons */
+    color: #000; /* Default icon color */
+    text-decoration: none; /* Removes underline on links */
+    transition: color 0.3s; /* Adds a smooth hover effect */
+}
+
+.footer .socials a:hover {
+    color: #0077b5;
+}
+
+/* Span */
+.socket {
+    background-color: #800000;
+}
+.socket .copyright {
+    float: left;
+}
+
